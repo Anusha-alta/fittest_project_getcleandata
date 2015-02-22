@@ -38,6 +38,7 @@ Average by Subject and Activity.Label of Mean 3-axial raw Time domain signal fro
 	
 
 # Average  by Subject and Activity.Label of Mean Body Linear acceleration and angular velocity on 3 axis, by Subject and Activity.Label 
+
 	Time.BodyAccJerk.Mean.X
 
 	Time.BodyAccJerk.Mean.Y
@@ -92,38 +93,88 @@ Average by Subject and Activity.Label of Mean 3-axial raw Time domain signal fro
 	Frequency.BodyBodyGyroJerkMag-mean
 
 
-Following 33 columns are averages (summary) of Standard Deviation values extracted from the original x_test and x_train datasets. 
+# Following 33 columns are averages (summary) of *Standard Deviation values* extracted from the original x_test and x_train datasets. 
 
-Time.BodyAcc-std-X
-Time.BodyAcc-std-Y
-Time.BodyAcc-std-Z
-Time.GravityAcc-std-X
-Time.GravityAcc-std-Y
-Time.GravityAcc-std-Z
-Time.BodyAccJerk-std-X
-Time.BodyAccJerk-std-Y
-Time.BodyAccJerk-std-Z
-Time.BodyGyro-std-X
-Time.BodyGyro-std-Y
-Time.BodyGyro-std-Z
-Time.BodyGyroJerk-std-X
-Time.BodyGyroJerk-std-Y
-Time.BodyGyroJerk-std-Z
-Time.BodyAccMag-std
-Time.GravityAccMag-std
-Time.BodyAccJerkMag-std
-Time.BodyGyroMag-std
-Time.BodyGyroJerkMag-std
-Frequency.BodyAcc-std-X
-Frequency.BodyAcc-std-Y
-Frequency.BodyAcc-std-Z
-Frequency.BodyAccJerk-std-X
-Frequency.BodyAccJerk-std-Y
-Frequency.BodyAccJerk-std-Z
-Frequency.BodyGyro-std-X
-Frequency.BodyGyro-std-Y
-Frequency.BodyGyro-std-Z
-Frequency.BodyAccMag-std
-Frequency.BodyBodyAccJerkMag-std
-Frequency.BodyBodyGyroMag-std
-Frequency.BodyBodyGyroJerkMag-std
+# Average by Subject and Activity.Label of Standard Deviation 3-axial raw Time domain signal from the acceloerometer, separated into boy and gravity accelearation, after removing Noise. 
+
+	Time.BodyAcc-std-X
+
+	Time.BodyAcc-std-Y
+
+	Time.BodyAcc-std-Z
+
+	Time.GravityAcc-std-X
+	
+	Time.GravityAcc-std-Y
+
+	Time.GravityAcc-std-Z
+
+# Average  by Subject and Activity.Label of Standard Deviation of Fast Fourier Transform (FFR) applied to signals producing
+
+	Time.BodyAccJerk-std-X
+	
+	Time.BodyAccJerk-std-Y
+	
+	Time.BodyAccJerk-std-Z
+
+	Time.BodyGyroJerk-std-X
+	
+	Time.BodyGyroJerk-std-Y
+	
+	Time.BodyGyroJerk-std-Z
+
+# Average  by Subject and Activity.Label of Mean Body Linear acceleration and angular velocity on 3 axis, by Subject and Activity.Label 	
+	
+	Time.BodyAccMag-std
+
+	Time.GravityAccMag-std
+
+	Time.BodyAccJerkMag-std
+
+	Time.BodyGyroMag-std
+
+	Time.BodyGyroJerkMag-std
+
+# Average  by Subject and Activity.Label of Standard Deviations of Fast Fourier Transform (FFR) applied to 3-Axial signals obtained from the Accelerometer and Gyroscope.
+
+	Frequency.BodyAcc-std-X
+
+	Frequency.BodyAcc-std-Y
+
+	Frequency.BodyAcc-std-Z
+
+	Frequency.BodyAccJerk-std-X
+
+	Frequency.BodyAccJerk-std-Y
+
+	Frequency.BodyAccJerk-std-Z
+
+	Frequency.BodyGyro-std-X
+
+	Frequency.BodyGyro-std-Y
+
+	Frequency.BodyGyro-std-Z
+
+	Frequency.BodyAccMag-std
+
+	Frequency.BodyBodyAccJerkMag-std
+
+	Frequency.BodyBodyGyroMag-std
+
+	Frequency.BodyBodyGyroJerkMag-std
+
+# No descriptions were found in features_info.txt for 
+	Time.BodyGyro-mean-X
+	
+	Time.BodyGyro-mean-Y
+	
+	Time.BodyGyro-mean-Z	
+	
+	Time.BodyGyro-std-X
+	
+	Time.BodyGyro-std-Y
+	
+	Time.BodyGyro-std-Z	
+	
+
+
