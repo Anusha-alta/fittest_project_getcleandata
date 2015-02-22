@@ -11,7 +11,7 @@ Coursera-Getting and Cleaning Data: Course project to analysis fitness data
 
 ###The dataset includes the following files
 ===========================================================================
-## 'run_analysis.R' 
+# 'run_analysis.R' 
    This R program analyses train and test fitness data located at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
    There are 180 rows and 68 columns in the final dataset. 
@@ -75,11 +75,8 @@ Coursera-Getting and Cleaning Data: Course project to analysis fitness data
 * 
 
 # 'Codebook.md'
-Describe  variables in the final dataset. 
+Description of variables in the final dataset. 
 
-
-###**********************************************Appendix*****************###
-*List of aggregate columns in the final data set. 
 Time.BodyAcc.Mean.X
 Time.BodyAcc.Mean.Y
 Time.BodyAcc.Mean.Z
