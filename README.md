@@ -52,9 +52,9 @@ Coursera-Getting and Cleaning Data: Course project to analysis fitness data
   
 
 
-#Description of run_analysis.R* 
+##Description of run_analysis.R* 
 
-#Step 1 - Read data files and create single dataset with Test and Train data. 
+##Step 1 - Read data files and create single dataset with Test and Train data. 
 
 *run_analysis.R* reads files from UCI HAR Dataset and converts to data frames. 
 	
@@ -75,24 +75,25 @@ Coursera-Getting and Cleaning Data: Course project to analysis fitness data
 
 * Test and Train data frames are combined to form a single dataset consisting for both Test and Train data, with Subject information, Activity information and Features information. 
 
-#Step 2 - Extract Mean and Standard Deviation columns from above dataset
+##Step 2 - Extract Mean and Standard Deviation columns from above dataset
 
 * A data frame consisting of only means and standard deviations is extracted from the above data set. 
 
 * Meanfreq and angle means are ignored in this process because I did not feel these variables represented the true means of the test or train data 
 
-#Step 3 - Convert above data set to Tidy Dataset. 
+##Step 3 - Convert above data set to Tidy Dataset. 
 
 * Created a tidy data set by making sure each row exhibited just one observation. This was achieved using the Melt function. 
 
-#Step 4 - Calculate averages of Mean and Standard Deviation values by Subject, Activity Label and Type of Observation.  
+##Step 4
+ - Calculate averages of Mean and Standard Deviation values by Subject, Activity Label and Type of Observation.  
 
-# Final data set has 180 rows and 68 columns. 
+* Final data set has 180 rows and 68 columns. 
 
 
 ## 'Codebook.md': Provides information about the variables in the Final Dataset. 
 
-# List of columns in the final dataset - 
+## List of columns in the final dataset - 
 
 Activity.Label
 
