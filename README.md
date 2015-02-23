@@ -11,48 +11,56 @@ Coursera-Getting and Cleaning Data: Course project to analysis fitness data
 
 ###The dataset includes the following files
 ===========================================================================
-# 'run_analysis.R' 
-   This R program analyses train and test fitness data located at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
-   There are 180 rows and 68 columns in the final dataset. 
+# Program Name: 'run_analysis.R' 
 
-   Each record provides Subject, Activity_label and Averages of Means and Standard Deviation data extracted from the original Data set. List of column names included at the end of this file.  
+*Source Data:*
+============
+
+   run_analysis.R: Analyses data Train and Test fitness data located at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+
+   Data Description: The *source fitness data* consists of results from experiments carried out with a group of 30 volunteers. Each volunteer wears a Samsung Galaxy SII phone while performing these six  ctivities- WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING. 30% of the data gathered was treated as "test" data and 70% as "train" data.
+
+   Source Directory: /UCI HAR Dataset
   
-*A Brief description of the process that went in to creating the final dataset* 
+   *Files in the directory*
+    ======================
 
-*Description of Source data*
+   *Information/Descriptive files *
 
-   The *source fitness data* consists of results from experiments carried out with a group of 30 volunteers. Each volunteer wears a Samsung Galaxy SII phone while performing these six  
-   activities- WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING. 30% of the data gathered was treated as "test" data and 70% as "train" data.
+	- 'README.txt'
+	
+	- 'features_info.txt': Shows information about the variables used on the feature vector.
 
-  Following are the files included in the directory
+   * Data Files*
 
-- 'README.txt'
+	- 'features.txt': List of all features.
 
-- 'features_info.txt': Shows information about the variables used on the feature vector.
+	- 'activity_labels.txt': Links the class labels with their activity name.
 
-- 'features.txt': List of all features.
+	- 'train/X_train.txt': Training set.
 
-- 'activity_labels.txt': Links the class labels with their activity name.
+	- 'train/y_train.txt': Training labels.
 
-- 'train/X_train.txt': Training set.
+	- 'train/subject_train.txt': Subjects (list of numbers 1 - 30 representing the 30 volunteers)
 
-- 'train/y_train.txt': Training labels.
+	- 'test/X_test.txt': Test set.
 
-- 'train/subject_train.txt': Subjects (list of numbers 1 - 30 representing the 30 volunteers)
+	- 'test/y_test.txt': Test labels.
 
-- 'test/X_test.txt': Test set.
+	- 'test/subject_test.txt': Subjects (list of numbers 1 - 30 representing the 30 volunteers).
+  
 
-- 'test/y_test.txt': Test labels.
 
-- 'test/subject_test.txt': Subjects (list of numbers 1 - 30 representing the 30 volunteers).
+#Description of run_analysis.R* 
 
-*Description of run_analysis.R* 
+#Step 1 - Read data files and create single dataset with Test and Train data. 
 
-*run_analysis.R* reads files common to both test and train and converts to data frames. 
+*run_analysis.R* reads files from UCI HAR Dataset and converts to data frames. 
 	
 	- features.txt, activity_labels.txt. 
-* To make compile data frame for Training data (similar process is followed for test data) 
+
+*run_analysis.R* reads files from *UCI HAR Dataset/train* and to get *training* data and converts to data frames. 
 
 	- read files train/X_train.tx, train/y_train.txt, train/subject_train.txt and convert to Data frame
 
@@ -62,84 +70,165 @@ Coursera-Getting and Cleaning Data: Course project to analysis fitness data
 
         - To the resultant df, assigns "features" as column names to all the variable columns. i.e. the all columns except Activity Label and Subject. 
 
-* Test data is compiled in a similar fashion. 
+*run_analysis.R* reads files from *UCI HAR Dataset/test* and to get *test* data and converts to data frames in a manner similar to that mentioned above for *train* data. 
+ 
 
-* Test and Train data frames are combined using cbind.
+* Test and Train data frames are combined to form a single dataset consisting for both Test and Train data, with Subject information, Activity information and Features information. 
+
+#Step 2 - Extract Mean and Standard Deviation columns from above dataset
 
 * A data frame consisting of only means and standard deviations is extracted from the above data set. 
 
 * Meanfreq and angle means are ignored in this process because I did not feel these variables represented the true means of the test or train data 
 
+#Step 3 - Convert above data set to Tidy Dataset. 
+
 * Created a tidy data set by making sure each row exhibited just one observation. This was achieved using the Melt function. 
 
-* 
+#Step 4 - Calculate averages of Mean and Standard Deviation values by Subject, Activity Label and Type of Observation.  
 
-# 'Codebook.md'
-Description of variables in the final dataset. 
+# Final data set has 180 rows and 68 columns. 
+
+
+## 'Codebook.md': Provides information about the variables in the Final Dataset. 
+
+# List of columns in the final dataset - 
+
+Activity.Label
+
+Subject
 
 Time.BodyAcc.Mean.X
+
 Time.BodyAcc.Mean.Y
+
 Time.BodyAcc.Mean.Z
+
 Time.GravityAcc.Mean.X
+
 Time.GravityAcc.Mean.Y
+
 Time.GravityAcc.Mean.Z
+
 Time.BodyAccJerk.Mean.X
+
 Time.BodyAccJerk.Mean.Y
+
 Time.BodyAccJerk.Mean.Z
+
 Time.BodyGyro.Mean.X
+
 Time.BodyGyro.Mean.Y
+
 Time.BodyGyro.Mean.Z
+
 Time.BodyGyroJerk.Mean.X
+
 Time.BodyGyroJerk.Mean.Y
+
 Time.BodyGyroJerk.Mean.Z
+
 Time.BodyAccMag-mean
+
 Time.GravityAccMag-mean
+
 Time.BodyAccJerkMag-mean
+
 Time.BodyGyroMag-mean
+
 Time.BodyGyroJerkMag-mean
+
 Frequency.BodyAcc.Mean.X
+
+
 Frequency.BodyAcc.Mean.Y
+
 Frequency.BodyAcc.Mean.Z
+
 Frequency.BodyAccJerk.Mean.X
+
 Frequency.BodyAccJerk.Mean.Y
+
 Frequency.BodyAccJerk.Mean.Z
+
 Frequency.BodyGyro.Mean.X
+
 Frequency.BodyGyro.Mean.Y
+
 Frequency.BodyGyro.Mean.Z
+
 Frequency.BodyAccMag-mean
+
 Frequency.BodyBodyAccJerkMag-mean
+
 Frequency.BodyBodyGyroMag-mean
+
 Frequency.BodyBodyGyroJerkMag-mean
+
 Time.BodyAcc-std-X
+
 Time.BodyAcc-std-Y
+
 Time.BodyAcc-std-Z
+
 Time.GravityAcc-std-X
+
 Time.GravityAcc-std-Y
+
 Time.GravityAcc-std-Z
+
 Time.BodyAccJerk-std-X
+
 Time.BodyAccJerk-std-Y
+
 Time.BodyAccJerk-std-Z
+
 Time.BodyGyro-std-X
+
 Time.BodyGyro-std-Y
+
 Time.BodyGyro-std-Z
+
 Time.BodyGyroJerk-std-X
+
 Time.BodyGyroJerk-std-Y
+
 Time.BodyGyroJerk-std-Z
+
 Time.BodyAccMag-std
+
 Time.GravityAccMag-std
+
 Time.BodyAccJerkMag-std
+
 Time.BodyGyroMag-std
+
 Time.BodyGyroJerkMag-std
+
 Frequency.BodyAcc-std-X
+
 Frequency.BodyAcc-std-Y
+
 Frequency.BodyAcc-std-Z
+
 Frequency.BodyAccJerk-std-X
+
 Frequency.BodyAccJerk-std-Y
+
 Frequency.BodyAccJerk-std-Z
+
 Frequency.BodyGyro-std-X
+
 Frequency.BodyGyro-std-Y
+
 Frequency.BodyGyro-std-Z
+
 Frequency.BodyAccMag-std
+
 Frequency.BodyBodyAccJerkMag-std
+
 Frequency.BodyBodyGyroMag-std
+
 Frequency.BodyBodyGyroJerkMag-std
+
+
